@@ -3331,10 +3331,10 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-musicca@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/musicca/-/musicca-1.0.1.tgz#e860d8b6560a32cded3ad1053744a4561bd990a1"
-  integrity sha512-2thJvX/N2wzsNWihKkHRr+NmqzL6J1b2hoMWLMhJAX5JWxllqWr5Szw4hSJEUeRGYG9k6gnC+lAuLrkXn9GHOA==
+musicca@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/musicca/-/musicca-1.0.3.tgz#c1397a19c73d9c86c97c0b98995f4575a75e6440"
+  integrity sha512-NOXE9Z/Si5uDFB8xf0kL6eFhcWAI0xsu9sKhbkGzpgXt9Q8dw40umHlNNb9KvT2js9PM9utI1YQ8Ty/ehXuGgw==
 
 natural-compare@^1.4.0:
   version "1.4.0"
