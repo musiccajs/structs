@@ -10,47 +10,19 @@
 
 # About 📛
 
-Musicca is a **modular**, **extensible** and **flexible** media stream manager for [Node.js](https://nodejs.org/).
-
-- Object-oriented
-- Simple and light-weight
-- Modular by design
+This package is a collection of structures for [Musicca](https://www.npmjs.com/package/musicca).
 
 # Installation 💾
 
 ```sh-session
-npm install musicca
-yarn add musicca
-pnpm add musicca
-```
-
-# Quick Start 🌠
-
-Install all required dependencies
-
-```sh-session
-npm install musicca @musicca/structs @musicca/extractors
-yarn add musicca @musicca/structs @musicca/extractors
-pnpm add musicca @musicca/structs @musicca/extractors
-```
-
-Create a new Musicca instance
-
-```ts
-import Musicca from 'musicca';
-import { MemoryQueue } from '@musicca/structs';
-import { YoutubeExtractor } from '@musicca/extractors';
-
-const client = new Musicca<MemoryQueue>({
-  structs: {
-    queue: MemoryQueue
-  }
-});
+npm install @musicca/structs
+yarn add @musicca/structs
+pnpm add @musicca/structs
 ```
 
 # Links 🔗
 
 - [Website](https://musicca.edqe.me) ([source](https://github.com/musiccajs/website))
 - [Documentation](https://musicca.edqe.me/docs)
-- [Github](https://github.com/musiccajs/musicca)
-- [npm](https://www.npmjs.com/package/musicca)
+- [Github](https://github.com/musiccajs/structs)
+- [npm](https://www.npmjs.com/package/@musicca/structs)
