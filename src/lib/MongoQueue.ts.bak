@@ -9,7 +9,7 @@ export interface IMongoQueue {
 export interface MongoQueueOptions {
   db: Model<IMongoQueue>;
   flush: boolean;
-  data?: Record<string, unknown>;
+  data: Record<string, unknown>;
 }
 
 export class MongoQueue extends Queue {
