@@ -1,13 +1,12 @@
 import Musicca, { Media, MusiccaError } from 'musicca';
-import mongoose, { Connection, Model, model } from 'mongoose';
+import mongoose, { Model, model, Mongoose } from 'mongoose';
 import { randomBytes } from 'crypto';
-import { MongoQueue } from '../src';
+import { IMongoQueue, MongoQueue } from '../src';
 import { FooExtractor, RandomReadable } from './classes';
-import { schema } from '../src/lib/MongoQueue';
 
 // Test connections and model
-let mol = null;
-let conn = null;
+let mol: Model<IMongoQueue> = null;
+let conn: Mongoose = null;
 
 const client = new Musicca<MongoQueue>({
   plugins: [
@@ -21,10 +20,10 @@ const client = new Musicca<MongoQueue>({
 describe('connecting to test db', () => {
   test('connecting to mongo', async () => {
     conn = await mongoose.connect('mongodb://localhost/test');
-    expect(conn).toBe(Connection);
+    expect(conn).toBe(Mongoose);
   });
   test('creating test model', () => {
-    mol = model('testqueue', schema);
+    mol = model('testqueue', MongoQueue.schema);
     expect(mol).toBe(Model);
   });
 });
@@ -54,7 +53,9 @@ describe('test queue', () => {
   const title = 'very foo';
 
   test('should add test media', async () => {
-    const media = await queue.add(await client.extractors.extract(title));
+    const extracted = await client.extractors.extract(title);
+    if (!extracted) return;
+    const media = await queue.add(extracted);
     expect(media).toBeInstanceOf(Media);
   });
 
